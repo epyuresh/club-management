@@ -15,6 +15,7 @@ const Contact = () => {
 
           {/* Contact Details Section */}
           <div className="contact-header">
+          <img src="/ll.png" alt="Club-Master Logo" className="ccontact-logo" />
 
             <h1>Get in Touch with Club-Master</h1>
             <p className="contact-paragraph">
