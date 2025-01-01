@@ -6,7 +6,7 @@ import Contact  from './pages/Contact';
 import Login  from './pages/Login';
 import Signup  from './pages/Signup';
 import Faqs  from './pages/Faqs';
-
+import Privacy  from './pages/Privacy';
 
 
 
@@ -23,7 +23,7 @@ function App() {
       <Route path="login" element={<Login/>}/>
       <Route path="signup" element={<Signup/>}/>
       <Route path="faqs" element={<Faqs/>}/>
-      
+      <Route path="privacy" element={<Privacy/>}/>
       
      
  

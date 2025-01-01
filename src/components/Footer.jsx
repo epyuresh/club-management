@@ -32,7 +32,7 @@ const Footer = () => {
           <h4>Legal</h4>
           <ul>
             <li>Terms and Conditions</li>
-            <li>Privacy Policy</li>
+            <li><a href="/privacy">Privacy Policy</a></li>
             <li><a href="/faqs">FAQs</a></li>
           </ul>
         </div>
