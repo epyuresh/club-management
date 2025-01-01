@@ -122,7 +122,7 @@ const Background = () => {
           backgroundImage: "url('/stu.jpg')",
           backgroundPosition: "center 40%",
           minHeight: "500px",
-          marginBottom: "2px",
+          marginBottom: "0px",
         }}
       >
         <div className="absolute left-10 top-1.0 transform -translate-y-1/2">
