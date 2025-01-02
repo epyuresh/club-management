@@ -19,7 +19,8 @@ const Signup = () => {
       <div className="rsignup-form-wrapper">
         <h2 className="rsignup-heading">Create Your Account</h2>
         <form className="rsignup-form">
-          <input type="text" className="rinput-box" placeholder="Full Name" />
+          <input type="text" className="rinput-box" placeholder="First Name" />
+          <input type="text" className="rinput-box" placeholder="Last Name" />
           <input type="text" className="rinput-box" placeholder="Username" />
           <input type="email" className="rinput-box" placeholder="Email" />
           <input type="text" className="rinput-box" placeholder="Phone" />

@@ -12,7 +12,7 @@
     position: absolute;
     top: 1px;
     left: 270px;
-    width: 170px;
+    width: 150px;
     height: auto;
 }
 /* Left Section for Text and Sign Up Button */
@@ -65,7 +65,7 @@
 }
 .rsignup-container {
     position:absolute;
-    top: 23%;
+    top: 20%;
     left: 10%;
     display: flex;
     justify-content: flex-start; /* Aligns content to the left */

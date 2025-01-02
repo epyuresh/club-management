@@ -30,7 +30,7 @@ const Background = () => {
 
       {/* New Interface Section */}
       <div className="w-full px-10 py-16 bg-white">
-        <h3 className="text-2xl md:text-4xl font-bold text-center mb-8">
+        <h3 className="text-2xl md:text-4xl font-bold text-center mb-8 text-black">
           Empowering Your University Experience
         </h3>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -41,7 +41,7 @@ const Background = () => {
                 <i className="fas fa-users"></i>
               </span>
             </div>
-            <h4 className="text-lg font-semibold mb-2">
+            <h4 className="text-lg font-semibold mb-2 text-black">
               Leadership Development
             </h4>
             <p className="text-gray-700">
@@ -58,7 +58,7 @@ const Background = () => {
                 <i className="fas fa-calendar-alt"></i>
               </span>
             </div>
-            <h4 className="text-lg font-semibold mb-2">Event Management</h4>
+            <h4 className="text-lg font-semibold mb-2 text-black">Event Management</h4>
             <p className="text-gray-700">
               Learn to plan and execute successful club events with our
               comprehensive event management training, covering budgeting,
@@ -73,7 +73,7 @@ const Background = () => {
                 <i className="fas fa-briefcase"></i>
               </span>
             </div>
-            <h4 className="text-lg font-semibold mb-2">Club Management</h4>
+            <h4 className="text-lg font-semibold mb-2 text-black">Club Management</h4>
             <p className="text-gray-700">
               Master the art of running successful clubs with our comprehensive
               management training, covering member engagement, financial

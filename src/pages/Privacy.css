@@ -20,22 +20,25 @@ body {
     color: white;
     text-align: center;
     padding: 40px 20px;
+    font-size: 70px;
   }
   
   .privacy-header h1 {
     margin: 0;
-    font-size: 36px;
+    font-size: 40px;
   }
   
   .privacy-header p {
     margin-top: 10px;
     font-size: 18px;
+    font-size: 25px;
   }
   
   .privacy-content {
     max-width: 800px;
     margin: 40px auto;
     padding: 20px;
+    margin-top: 25px;
     
   }
   
