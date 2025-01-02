@@ -146,7 +146,7 @@ const Background = () => {
       </div>
       {/* Principles Guiding Our University Clubs Section */}
 <div className="w-full px-10 py-16 bg-white">
-  <h3 className="text-3xl md:text-4xl font-bold text-center mb-8">
+  <h3 className="text-3xl md:text-4xl font-bold text-center mb-8 text-black">
     The principles guiding our university clubs
   </h3>
   <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
