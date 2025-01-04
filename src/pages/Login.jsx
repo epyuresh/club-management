@@ -46,7 +46,9 @@ const Login = () => {
           <p className="forgot-password">Forgot Password?</p>
 
           {/* Sign In Button */}
-          <button className="signin-button">SIGN IN</button>
+          <a href="/clubhome">
+  <button className="signin-button">SIGN IN</button>
+         </a>
         </div>
 
         {/* Left Section for Text and Sign Up Button */}
@@ -58,6 +60,7 @@ const Login = () => {
 
           {/* Sign Up Button with href */}
           <a href="/signup" className="signup-button">
+          
             SIGN UP
           </a>
         </div>

@@ -7,7 +7,7 @@ import Login  from './pages/Login';
 import Signup  from './pages/Signup';
 import Faqs  from './pages/Faqs';
 import Privacy  from './pages/Privacy';
-
+import Clubhome  from './pages/Clubhome';
 
 
 
@@ -24,6 +24,7 @@ function App() {
       <Route path="signup" element={<Signup/>}/>
       <Route path="faqs" element={<Faqs/>}/>
       <Route path="privacy" element={<Privacy/>}/>
+      <Route path="clubhome" element={<Clubhome/>}/>
       
      
  
