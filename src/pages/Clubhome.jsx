@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./Clubhome.css";
+import Dashboard from "../components/Dashboard";
+import Sidebar from "../components/Sidebar";
 
 const clubs = [
   {
@@ -67,11 +69,15 @@ const ClubCard = ({ club }) => {
 const Clubhome = () => {
   return (
     <div className="aa-club-home-page">
+      <Sidebar />
+      <div className="aa-club-content">
+      <Dashboard />
       <div className="aa-club-container">
         {clubs.map((club, index) => (
           <ClubCard key={index} club={club} />
         ))}
       </div>
+    </div>
     </div>
   );
 };
