@@ -1,8 +1,11 @@
 .aa-club-home-page{
-  background: linear-gradient(135deg, rgb(242, 244, 248), rgb(198, 224, 250));
-
+  background-image: url('./gymnew.png');
+  background-size: cover;
+  background-position: center;
+  
   color: white; /* Optional for better text visibility */
   height: 100vh; /* Makes the div fill the full viewport height */
+  width:100%;
   position: relative; 
 }
 
@@ -16,7 +19,7 @@
     justify-content: center;
     gap: 20px;
     padding: 20px;
-    left: 250px;
+    left: 300px;
     margin-top: 150px;
 
     
@@ -56,6 +59,7 @@
     padding: 20px 0;
     font-family: bold;
     font-size: 20px;
+    opacity: 2.5;
 
   }
   
