@@ -12,6 +12,9 @@ import Clubhome  from './pages/Clubhome';
 
 
 
+
+
+
 function App() {
 
   return (
@@ -25,6 +28,7 @@ function App() {
       <Route path="faqs" element={<Faqs/>}/>
       <Route path="privacy" element={<Privacy/>}/>
       <Route path="clubhome" element={<Clubhome/>}/>
+      
       
      
  
