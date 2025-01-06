@@ -8,7 +8,7 @@ import Signup  from './pages/Signup';
 import Faqs  from './pages/Faqs';
 import Privacy  from './pages/Privacy';
 import Clubhome  from './pages/Clubhome';
-
+import Term  from './pages/Term';
 
 
 
@@ -28,8 +28,7 @@ function App() {
       <Route path="faqs" element={<Faqs/>}/>
       <Route path="privacy" element={<Privacy/>}/>
       <Route path="clubhome" element={<Clubhome/>}/>
-      
-      
+      <Route path="term" element={<Term/>}/>
      
  
       
