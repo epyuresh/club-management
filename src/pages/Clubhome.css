@@ -1,5 +1,5 @@
 .aa-club-home-page{
-  background-image: url('./gymnew.png');
+  background-image: url('./padura2.jpg');
   background-size: cover;
   background-position: center;
   
@@ -20,7 +20,7 @@
     gap: 20px;
     padding: 20px;
     left: 300px;
-    margin-top: 150px;
+    margin-top: 120px;
 
     
  /* Set background to white for the container */
@@ -53,14 +53,17 @@
     z-index: 1;
   }
   
+  
+
   .aa-club-header {
     position: relative;
     z-index: 2;
     padding: 20px 0;
     font-family: bold;
     font-size: 20px;
-    opacity: 2.5;
-
+    color: #f8e71c; /* Bright yellow for high contrast */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Adds text shadow for better visibility */
+    opacity: 1; /* Ensure full opacity */
   }
   
   .aa-club-logo {
