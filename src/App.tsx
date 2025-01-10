@@ -9,6 +9,10 @@ import Faqs  from './pages/Faqs';
 import Privacy  from './pages/Privacy';
 import Clubhome  from './pages/Clubhome';
 import Term  from './pages/Term';
+import Rotractlogin  from './pages/Rotractlogin';
+
+
+import Adminsidebar  from './components/Adminsidebar';
 
 
 
@@ -29,7 +33,8 @@ function App() {
       <Route path="privacy" element={<Privacy/>}/>
       <Route path="clubhome" element={<Clubhome/>}/>
       <Route path="term" element={<Term/>}/>
-     
+      <Route path="rotractlogin" element={<Rotractlogin/>}/>
+      <Route path="adminsidebar" element={<Adminsidebar/>}/>
  
       
      

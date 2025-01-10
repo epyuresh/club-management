@@ -18,7 +18,7 @@ const clubs = [
     logo: "/rotractlogo.png",
     bgImages: ["/rotractback.jpg", "/aisecback.jpg", "/ledback.jpg"],
     description: `Rotaract Club is a global organization of young professionals dedicated to community service, leadership development, and cultural exchange, fostering positive change through impactful projects and networking opportunities worldwide.`,
-   
+    link: "/rotractlogin",
   },
   {
     name: "ISACA CLUB",
@@ -61,7 +61,9 @@ const ClubCard = ({ club }) => {
       </div>
       <hr />
       <p className="aa-club-description">{club.description}</p>
-      <button className="aa-register-btn">Join Now</button>
+      <a href={club.link} className="aa-register-btn"> Join Now</a>
+    
+       
     </div>
   );
 };
