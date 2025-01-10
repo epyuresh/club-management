@@ -1,7 +1,7 @@
 .rotaract-login-page {
     display: flex;
     flex-direction: row;
-    background: linear-gradient(to right, #eceff4, white);;
+    background: linear-gradient(to right, #4989f7, white);;
     height: 100vh;
     padding: 0;
     margin: 0;
@@ -40,12 +40,15 @@
     display: flex;
     flex-direction: column;
     margin-left: 20px; /* Keeps the text aligned with the left padding of the page */
+    
+    
 }
 
 .main-heading {
     font-size: 20px;
     font-weight: bold;
     margin: 0;
+    font-style: italic;
 }
 
 .sub-heading {
@@ -53,12 +56,18 @@
     color: rgb(79, 8, 234);
     margin-top: 10px;
     margin-bottom: 20px;
+    font-weight: bold;
 }
 
 .enrollment-form {
     display: flex;
     flex-direction: column;
     width: 300px;
+   
+     
+   
+    
+    
 }
 
 .enrollment-input {
@@ -68,7 +77,7 @@
     border-radius: 5px;
     font-size: 16px;
     position: relative;
-    left: 25px;
+    left: 35px;
 }
 
 .submit-button {
@@ -80,7 +89,7 @@
     border-radius: 3px;
     cursor: pointer;
     position: relative;
-    left: 25px;
+    left: 35px;
     width: 100px;
 }
 
@@ -90,8 +99,39 @@
 
 .bottom-left-image {
     position: absolute;
-    margin-top: -50px;
+    margin-top: -40px;
     width: 500px; /* Adjust size as needed */
     height: auto; /* Maintain aspect ratio */
-    right: 650px;
+    right: 730px;
+}
+
+.typewriter-effect {
+    position: absolute;
+    top: 150px;
+    right: 100px;
+    text-align: right;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+.typewriter-effect h1 {
+    font-size: 40px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.typewriter-effect h2 {
+    font-size: 35px;
+    font-weight: normal;
+    position: relative;
+    right: 150px;
+    color: #de1212;
+}
+.border1 {
+    padding: 20px; /* Add some padding inside the form */
+    border: 2px solid #ccc; /* Adds a border */
+    border-radius: 10px; /* Rounds the corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow for better appearance */
+    background-color: white; /* Optional: Sets a background color */
+    
 }
