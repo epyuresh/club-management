@@ -1,5 +1,4 @@
 .rotaract-login-page {
-    display: flex;
     flex-direction: row;
     background: linear-gradient(to right, #4989f7, white);;
     height: 100vh;
@@ -121,11 +120,12 @@
 }
 
 .typewriter-effect h2 {
-    font-size: 35px;
+    font-size: 40px;
     font-weight: normal;
     position: relative;
     right: 150px;
     color: #de1212;
+    font-family: bold;
 }
 .border1 {
     padding: 20px; /* Add some padding inside the form */

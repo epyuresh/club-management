@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Typewriter } from 'react-simple-typewriter';
+import { useNavigate } from 'react-router-dom'; // Import useNavigate
 import './Rotractlogin.css';
 import Dashboard from "../components/Dashboard";
 import Sidebar from "../components/Sidebar";
@@ -7,6 +8,7 @@ import Sidebar from "../components/Sidebar";
 const Rotractlogin = () => {
     const [enrollmentKey, setEnrollmentKey] = useState('');
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
+    const navigate = useNavigate(); // Initialize useNavigate
 
     const images = [
         "/100.jpg",
@@ -25,8 +27,9 @@ const Rotractlogin = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         console.log("Enrollment Key Submitted:", enrollmentKey);
+        navigate('/rotract'); // Navigate to the /rotract page
     };
-
+    
     return (
         <div>
             <Dashboard />
