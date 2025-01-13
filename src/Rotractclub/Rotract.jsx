@@ -2,45 +2,99 @@ import React, { useState, useEffect } from "react";
 import "./Rotract.css";
 import { Typewriter } from "react-simple-typewriter";
 import Rotractnav from "../components/Rotractnav";
+import Rotractfooter from "../components/Rotractfooter";
 
 const Rotract = () => {
-  const images = [
-    "/r100.jpg",
-    "/r101.jpg",
-    "/r102.jpg",
-    "/r103.jpg",
-  ];
+  const images = ["/r100.jpg", "/r101.jpg", "/r102.jpg", "/r103.jpg"];
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [alternateImage, setAlternateImage] = useState("revent2.jpg");
+  const [isImpactVisible, setIsImpactVisible] = useState(false);
+  const [counts, setCounts] = useState({ members: 0, projects: 0, awards: 0 });
 
   useEffect(() => {
+    // Image carousel effect
     const intervalId = setInterval(() => {
       setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 3000); // Change image every 3 seconds
+    }, 3000);
 
-    return () => clearInterval(intervalId); // Clean up on component unmount
+    // Alternate image toggling
+    const alternateInterval = setInterval(() => {
+      setAlternateImage((prevImage) =>
+        prevImage === "revent2.jpg" ? "revent1.jpg" : "revent2.jpg"
+      );
+    }, 2000);
+
+    return () => {
+      clearInterval(intervalId);
+      clearInterval(alternateInterval);
+    };
   }, [images.length]);
 
-  // Scroll animation logic
   useEffect(() => {
-    const elements = document.querySelectorAll(".animate-on-scroll");
+    // Intersection Observer for animations
     const observer = new IntersectionObserver(
-      (entries, observer) => {
+      (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             entry.target.classList.add("in-view");
           }
         });
       },
-      { threshold: 0.5 } // Trigger when 50% of the element is in view
+      { threshold: 0.5 }
     );
 
+    const elements = document.querySelectorAll(".animate-on-scroll");
     elements.forEach((el) => observer.observe(el));
 
     return () => {
-      observer.disconnect(); // Cleanup observer when component unmounts
+      observer.disconnect();
     };
   }, []);
 
+  useEffect(() => {
+    // Observer for the "Our Impact" section
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setIsImpactVisible(true);
+          }
+        });
+      },
+      { threshold: 0.5 }
+    );
+
+    const impactSection = document.querySelector(".impact-container");
+    if (impactSection) {
+      observer.observe(impactSection);
+    }
+
+    return () => {
+      if (impactSection) observer.unobserve(impactSection);
+    };
+  }, []);
+
+  useEffect(() => {
+    if (isImpactVisible) {
+      const targetCounts = { members: 500, projects: 100, awards: 20 };
+      const duration = 2000; // Animation duration in milliseconds
+      const interval = 20; // Interval time in milliseconds
+
+      Object.keys(targetCounts).forEach((key) => {
+        const increment = targetCounts[key] / (duration / interval);
+
+        let currentValue = 0;
+        const intervalId = setInterval(() => {
+          currentValue += increment;
+          if (currentValue >= targetCounts[key]) {
+            currentValue = targetCounts[key];
+            clearInterval(intervalId);
+          }
+          setCounts((prev) => ({ ...prev, [key]: Math.floor(currentValue) }));
+        }, interval);
+      });
+    }
+  }, [isImpactVisible]);
   const avenues = [
     {
       title: "Club Service",
@@ -73,21 +127,43 @@ const Rotract = () => {
       icon: "/rr5.png",
     },
   ];
-  const project=[
-    
-  ]
+  const members = [
+    {
+      role: 'President',
+      name: 'John Doe',
+      email: 'john.doe@example.com',
+      image: '/tt1.jpg',
+    },
+    {
+      role: 'Vice President',
+      name: 'Jane Smith',
+      email: 'jane.smith@example.com',
+      image: '/tt1.jpg',
+    },
+    {
+      role: 'Secretary',
+      name: 'Mike Brown',
+      email: 'mike.brown@example.com',
+      image: '/tt1.jpg',
+    },
+    {
+      role: 'Treasurer',
+      name: 'Sara Davis',
+      email: 'sara.davis@example.com',
+      image: '/tt1.jpg',
+    },
+  ];
+
 
   return (
     <div>
       <Rotractnav />
 
-{/* Background Section */}
-      
+      {/* Background Section */}
       <div
         className="background-container"
         style={{ backgroundImage: `url(${images[currentImageIndex]})` }}
       >
-        
         <div className="text-overlay">
           <h1>
             Join the global movement of young leaders who are
@@ -97,13 +173,12 @@ const Rotract = () => {
             <div className="typewriter-text2">
               <Typewriter
                 words={["urgent problems.", "critical issues.", "global crises."]}
-                loop={0} // Infinite loop
+                loop={0}
                 cursor
                 cursorStyle="|"
                 typeSpeed={200}
                 deleteSpeed={50}
                 delaySpeed={1000}
-                className="typewriter-text2"
               />
             </div>
           </h1>
@@ -122,14 +197,7 @@ const Rotract = () => {
             <p>
               Welcome to the Rotaract Club of the University of Kelaniya! We’re
               passionate about serving our community through meaningful projects
-              while fostering lasting friendships among our members. Our
-              commitment to service not only benefits society but also facilitates
-              personal growth and leadership development for our members.
-            </p>
-            <p>
-              Join us in making a difference while building lifelong connections
-              and realizing your potential. Together, we create positive change in
-              the world and empower each other to thrive.
+              while fostering lasting friendships among our members.
             </p>
           </div>
 
@@ -156,10 +224,8 @@ const Rotract = () => {
           </div>
         </div>
       </div>
-
-      {/* Main Avenues Interface */}
-      {/* Main Avenues Interface */}
-      <div className="avenues-container">
+       {/* Main Avenues Interface */}
+       <div className="avenues-container">
         <h2>Main Avenues</h2>
         <div className="avenues">
           {avenues.map((avenue, index) => (
@@ -178,39 +244,111 @@ const Rotract = () => {
           ))}
         </div>
       </div>
+       {/* project interface*/}
 
-      {/* project interface*/}
-
-      <div className="project-rotract animate-on-scroll">
+       <div className="project-rotract animate-on-scroll">
         
-      <h1 className="project-title">Our Projects, Your Community, Brighter Futures</h1>
-      <p className="project-tagline">"The Ocean and Biodiversity Conservation project "ස්වභාසමුද්‍ර", organized by the <br /> Community Service Avenue" </p>
-      <div className="project-images">
-        <img src="/r100.jpg" alt="Image 1" className="project-image" />
-        <img src="/r100.jpg" alt="Image 2" className="project-image" />
-        <img src="/r100.jpg" alt="Image 3" className="project-image large" />
-        <img src="/r100.jpg" alt="Image 4" className="project-image" />
-        <img src="/r100.jpg" alt="Image 5" className="project-image" />
+        <h1 className="project-title">Our Projects, Your Community, Brighter Futures</h1>
+        <p className="project-tagline">"The Ocean and Biodiversity Conservation project "ස්වභාසමුද්‍ර", organized by the <br /> Community Service Avenue" </p>
+        <div className="project-images">
+          <img src="/pr1.jpg" alt="Image 1" className="project-image" />
+          <img src="/pr2.jpg" alt="Image 2" className="project-image" />
+          <img src="/pr3.jpeg" alt="Image 3" className="project-image large" />
+          <img src="/pr4.jpg" alt="Image 4" className="project-image" />
+          <img src="/pr5.jpeg" alt="Image 5" className="project-image" />
+        </div>
+      </div>
+      {/* report interface*/}
+      <div className="report-container animate-on-scroll">
+        {/* Left section with text */}
+        <div className="report-left-section">
+          <h1>Stay Updated with the Latest News!</h1>
+          <p>
+            Presenting to you the Annual Report of Rotaract Club of University
+            of Kelaniya for the Rotary International Year 2023-24.
+          </p>
+          <p>Take a glimpse on our journey through the year!</p>
+          <button className="report-button" onClick={() => window.location.href = 'link-to-your-report.pdf'}>Click here</button>
+        </div>
+  
+        {/* Right section with image */}
+        <div className="report-right-section">
+          <img src="Annualrotract.jpg" alt="Annual Report" />
+        </div>
+      </div>
+       {/* rotract events */}
+  
+      <div className="revent-container animate-on-scroll">
+        {/* Left Side: Text Content */}
+        <div className="revent-text-section">
+        <h1>See what's new on the RACUOK <span className="red-text">EVENTS!</span></h1>
+  
+          <p>
+            Explore our dynamic content showcasing the impact of passionate individuals 
+            and their journey towards positive transformation.
+          </p>
+          <p>
+            Discover how we’re making a difference in society while unlocking personal 
+            growth. Visit us today and be part of the story – where service, friendship, 
+            and empowerment unite!
+          </p>
+          <button className="revent-action-button">Click Here</button>
+        </div>
+  
+        {/* Right Side: Images */}
+        <div className="revent-image-section">
+          
+          <img src={alternateImage} alt="Alternate Event" className="revent-image" />
+          
+          
+         
+        </div>
+      </div>
+      <div className="awards-container animate-on-scroll">
+        <h1 className="awards-heading">AWARDS</h1>
+        <div className="awards-images">
+          <img src="raward1.png" alt="Award 1" className="award-image" />
+          <img src="raward2.png" alt="Award 2" className="award-image" />
+          <img src="raward3.png" alt="Award 3" className="award-image" />
+          <img src="raward4.png" alt="Award 4" className="award-image" />
+          <img src="raward5.png" alt="Award 5" className="award-image" />
+        </div>
+      </div>
+      {/* Executive bord */}
+      <div className="executive-board animate-on-scroll">
+      <h1>Executive Board</h1>
+      <div className="members">
+        {members.map((member, index) => (
+          <div className="member" key={index}>
+            <img src={member.image} alt={`${member.role} - ${member.name}`} />
+            <h2>{member.role}</h2>
+            <p>{member.name}</p>
+            <p>{member.email}</p>
+          </div>
+        ))}
       </div>
     </div>
-    {/* report interface*/}
-    <div className="report-container animate-on-scroll">
-      {/* Left section with text */}
-      <div className="report-left-section">
-        <h1>The Annual Report is now published!</h1>
-        <p>
-          Presenting to you the Annual Report of Rotaract Club of University
-          of Kelaniya for the Rotary International Year 2023-24.
-        </p>
-        <p>Take a glimpse on our journey through the year!</p>
-        <button className="report-button" onClick={() => window.location.href = 'link-to-your-report.pdf'}>Click here</button>
+
+      {/* Our Impact Section */}
+      <div className="impact-container animate-on-scroll">
+        <h2 className="impact-heading">Our Impact in Figures</h2>
+        <div className="impact-box">
+          <div className="impact-item">
+            <p className="impact-number">{counts.members}+</p>
+            <p className="impact-label">Members</p>
+          </div>
+          <div className="impact-item">
+            <p className="impact-number">{counts.projects}+</p>
+            <p className="impact-label">Projects</p>
+          </div>
+          <div className="impact-item">
+            <p className="impact-number">{counts.awards}+</p>
+            <p className="impact-label">Awards</p>
+          </div>
+        </div>
       </div>
 
-      {/* Right section with image */}
-      <div className="report-right-section">
-        <img src="Annualrotract.jpg" alt="Annual Report" />
-      </div>
-    </div>
+      <Rotractfooter />
     </div>
   );
 };

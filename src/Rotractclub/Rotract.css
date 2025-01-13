@@ -166,7 +166,8 @@
 .project-title {
   font-size: 2.5rem;
   margin: 0;
-  color: #0073e6;
+  color: #080678;
+  font-family: bold;
 }
 
 .project-tagline {
@@ -189,7 +190,7 @@
 }
 
 .project-image.large {
-  width: 250px; /* Increased size for the middle image */
+  width: 320px; /* Increased size for the middle image */
   height: 250px;
 }
 
@@ -202,7 +203,7 @@
   justify-content: space-between;
   padding: 20px;
   align-items: center;
-  height: 400px;
+  height: 500px;
 }
 
 .report-left-section {
@@ -213,10 +214,10 @@
 
 .report-right-section img {
   width: 100%;
-  max-width: 500px; /* You can adjust this size */
+  max-width: 400px; /* You can adjust this size */
   height: auto;
   position: relative;
-  margin-right: 40px;
+  margin-right: 90px;
   margin-top: 20px;
   border-radius: 50px;
 }
@@ -229,20 +230,205 @@
 .report-left-section h1 {
   font-size: 36px; /* Adjust the size as needed */
   font-weight: bold; /* Makes the text bold */
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 .report-button {
-  margin-top: 20px;
+  margin-top: 30px;
   padding: 10px 20px;
-  font-size: 16px;
+  
+  background-color: #f01111;
+  color: white;
+  
+  border: none;
+  border-radius: 20px;
   cursor: pointer;
-  background-color: green; /* Sets the background color to green */
-  color: white; /* Sets the text color to white */
-  border: 2px solid green; /* Adds a green border */
-  border-radius: 5px; /* Optional: Adds rounded corners to the button */
-  font-weight: bold; /* Makes the button text bold */
+  font-size: 1rem;
+  transition: background-color 0.3s;
 }
 
 .report-button:hover {
   background-color: darkgreen; /* Changes color when hovered */
+}
+
+.revent-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  height: 400px;
+}
+
+.revent-text-section {
+  width: 50%;
+}
+
+.revent-text-section h1 {
+  font-size: 1.9rem;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+
+.revent-text-section p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  line-height: 1.5;
+}
+
+.revent-action-button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+.revent-action-button:hover {
+  background-color: #0056b3;
+}
+
+.revent-image-section {
+  width: 40%;
+}
+.red-text {
+  color: red;
+}
+
+
+.revent-image {
+  width: 70%;
+  border-radius: 10px;
+  margin-top: 10px; /* Adjust as needed */
+  margin-bottom: 0px; /* Adjust as needed */
+  margin-left: 100px; /* Adjust as needed */
+  
+}
+.eve{
+  color: #990b0b;
+  
+}
+.awards-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background: linear-gradient(to right, #efda8e, white);;
+}
+
+.awards-heading {
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #990b0b;
+}
+
+.awards-images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.award-image {
+  width: 200px; /* You can adjust the size of the images */
+  height: 200px;
+  object-fit: cover;
+}
+
+.impact-section {
+  text-align: center;
+  padding: 50px;
+}
+
+.impact-section h2 {
+  font-size: 2rem;
+  margin-top: 70px;
+}
+
+
+.impact-container {
+  text-align: center;
+  margin-top: 80px;
+  height: 200px;
+  margin-bottom: 50px;
+  
+}
+
+.impact-heading {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.impact-box {
+  display: flex;
+  justify-content: space-around;
+  border: 3px solid red;   /* Single border around all parts */
+  border-radius: 30px;     /* Oval corners for the whole box */
+  padding: 20px;
+  margin-top: 20px;
+  background-color: red;
+  width: 80%; 
+  margin-left: auto;
+  margin-right: auto;
+  
+}
+
+.impact-item {
+  text-align: center;
+  color: white;
+}
+
+.impact-number {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.impact-label {
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.executive-board {
+  text-align: center;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  margin-top: 50px;
+}
+
+.executive-board h1 {
+  margin-bottom: 30px;
+  font-size: 2.5em;
+}
+
+.members {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.member {
+  text-align: center;
+  max-width: 200px;
+}
+
+.member img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.member h2 {
+  margin: 10px 0;
+  font-size: 1.2em;
+}
+
+.member p {
+  margin: 5px 0;
+  font-size: 1em;
+  color: #555;
 }
