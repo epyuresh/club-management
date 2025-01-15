@@ -153,7 +153,29 @@ const Rotract = () => {
       image: '/tt1.jpg',
     },
   ];
-
+  const projects = [
+    {
+      title: "Project Kids First",
+      date: "Jul 22, 2022",
+      description:
+        "Kids First is a project empowering school students to recognize, prevent, and combat sexual harassment through safe, age-appropriate, and interactive sessions. It fosters awareness of boundaries, respect, and consent while building confidence to report and stand against harassment, ensuring the safety and well-being of the next generation.",
+      image: "pr100.jpg",
+    },
+    {
+      title: "Project Akura",
+      date: "Jul 22, 2022",
+      description:
+        "For seven years, Akura has supplied rural schools with books, essential supplies, and support, nurturing a love for learning and bridging educational gaps. This enduring initiative has transformed schools into hubs of opportunity, empowering students to dream big and ensuring every child can access quality education.",
+      image: "pr101.jpg",
+    },
+    {
+      title: "Beach Cleanup",
+      date: "Sep 15, 2023",
+      description:
+        "Our recent beach outing blended relaxation with purpose through a cleanup initiative. Club members of all ages worked together to remove litter, leaving the beach pristine. This fulfilling experience proved sustainability and enjoyment can coexist, reminding us that small efforts preserve our natural treasures for future enjoyment.",
+      image: "pr102.jpg",
+    },
+  ];
 
   return (
     <div>
@@ -246,18 +268,21 @@ const Rotract = () => {
       </div>
        {/* project interface*/}
 
-       <div className="project-rotract animate-on-scroll">
-        
-        <h1 className="project-title">Our Projects, Your Community, Brighter Futures</h1>
-        <p className="project-tagline">"The Ocean and Biodiversity Conservation project "ස්වභාසමුද්‍ර", organized by the <br /> Community Service Avenue" </p>
-        <div className="project-images">
-          <img src="/pr1.jpg" alt="Image 1" className="project-image" />
-          <img src="/pr2.jpg" alt="Image 2" className="project-image" />
-          <img src="/pr3.jpeg" alt="Image 3" className="project-image large" />
-          <img src="/pr4.jpg" alt="Image 4" className="project-image" />
-          <img src="/pr5.jpeg" alt="Image 5" className="project-image" />
-        </div>
+       <div className="latest-projects animate-on-scroll">
+      <h2>Latest Projects</h2>
+      <div className="project-cards-container">
+        {projects.map((project, index) => (
+          <div key={index} className="project-card">
+            <img src={project.image} alt={project.title} className="project-card-image" />
+            <div className="project-card-content">
+              <p className="project-card-date">{project.date}</p>
+              <h3 className="project-card-title">{project.title}</h3>
+              <p className="project-card-description">{project.description}</p>
+            </div>
+          </div>
+        ))}
       </div>
+    </div>
       {/* report interface*/}
       <div className="report-container animate-on-scroll">
         {/* Left section with text */}
@@ -347,8 +372,8 @@ const Rotract = () => {
           </div>
         </div>
       </div>
-
       <Rotractfooter />
+      
     </div>
   );
 };

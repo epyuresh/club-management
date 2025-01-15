@@ -129,7 +129,7 @@
 }
 
 .avenue-card {
-  background: #a8b3fc;
+  background: #d7dcfa;
   border: 1px solid #ddd;
   border-radius: 10px;
   width: 250px;
@@ -156,48 +156,7 @@
   margin-bottom: 15px;
   margin-left: 60px;
 }
-.project-rotract {
-  background: linear-gradient(to right, #a7c2f0, white);;
-  color: white;
-  text-align: center;
-  padding: 20px;
-}
 
-.project-title {
-  font-size: 2.5rem;
-  margin: 0;
-  color: #080678;
-  font-family: bold;
-}
-
-.project-tagline {
-  font-size: 1.2rem;
-  margin: 10px 0;
-  color: #d4377e;
-}
-.project-images {
-  display: flex;
-  justify-content: center;
-  gap: 5px; /* This creates a small gap between the images */
-  margin-top: 20px;
-}
-
-.project-image {
-  width: 200px; /* Default size of the images */
-  height: 200px;
-  object-fit: cover;
-  transition: transform 0.3s ease; /* Smooth transition for hover effect */
-}
-
-.project-image.large {
-  width: 320px; /* Increased size for the middle image */
-  height: 250px;
-}
-
-.project-image:hover {
-  transform: scale(1.1); /* Adds a hover effect to make the images slightly larger */
-}
-/* App.css */
 .report-container {
   display: flex;
   justify-content: space-between;
@@ -431,4 +390,61 @@
   margin: 5px 0;
   font-size: 1em;
   color: #555;
+}
+.latest-projects {
+  text-align: center;
+  padding: 2rem;
+}
+
+.latest-projects h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.project-cards-container {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.project-card {
+  background: #f5f1f1;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 400px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+.project-card-image {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  padding: 8px 8px 8px 8px;
+  border-radius: 50px;
+}
+
+.project-card-content {
+  padding: 1rem;
+}
+
+.project-card-date {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 0.5rem;
+}
+
+.project-card-title {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.project-card-description {
+  font-size: 0.9rem;
+  color: #0e0101;
 }

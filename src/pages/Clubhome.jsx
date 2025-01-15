@@ -12,6 +12,7 @@ const clubs = [
     Leos engage in various community service activities, develop leadership skills, and experience the joy of serving others.`,
     logoStyle: { marginLeft: "10px", marginRight: "0", width: "60px", height: "50px" },
     headerStyle: { marginLeft: "10px", marginRight: "0" },
+    link: "/leologin",
   },
   {
     name: "ROTRACT CLUB",
@@ -28,6 +29,7 @@ const clubs = [
     logoStyle: { marginLeft: "10px" },
     
   },
+  
 ];
 
 const ClubCard = ({ club }) => {
