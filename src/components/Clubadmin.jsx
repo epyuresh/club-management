@@ -1,9 +1,9 @@
 import React from "react";
 import { FaUsers, FaPlus, FaCalendarAlt, FaNewspaper, FaCalendar, FaEdit, FaCog } from "react-icons/fa";
 
-import './Administrator.css'; // Updated CSS file name
+import './Clubadmin.css'; // Updated CSS file name
 
-const Administratorsidebar = () => {
+const Clubadmin = () => {
   return (
     <div className="administrator-sidebar">
       <ul className="administrator-sidebar-list">
@@ -17,4 +17,4 @@ const Administratorsidebar = () => {
   );
 };
 
-export default Administratorsidebar;
+export default Clubadmin;

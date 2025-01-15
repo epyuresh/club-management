@@ -13,6 +13,9 @@ import Rotractlogin  from './pages/Rotractlogin';
 import Adminsidebar  from './components/Adminsidebar';
 import Rotract  from './Rotractclub/Rotract';
 import Leologin  from './pages/Leologin';
+import Clubadmin  from './components/Clubadmin';
+
+
 
 
 
@@ -36,7 +39,7 @@ function App() {
       <Route path="adminsidebar" element={<Adminsidebar/>}/>
       <Route path="rotract" element={<Rotract/>}/>
       <Route path="leologin" element={<Leologin/>}/>
- 
+      <Route path="clubadmin" element={<Clubadmin/>}/>
       
      
 
