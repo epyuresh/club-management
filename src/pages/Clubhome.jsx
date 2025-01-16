@@ -27,7 +27,7 @@ const clubs = [
     bgImages: ["/4.jpg", "/5.jpg", "/6.jpg"],
     description: `ISACA Club empowers students and professionals in IT governance, cybersecurity, and risk management through knowledge sharing, certifications, and networking. It fosters leadership and career growth in the ever-evolving field of technology.`,
     logoStyle: { marginLeft: "10px" },
-    
+    link: "/isacalogin",
   },
   
 ];
