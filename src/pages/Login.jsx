@@ -4,6 +4,7 @@ import Footer from "../components/Footer";
 import './Login.css'; // Adjusted import path
 
 const Login = () => {
+  
   return (
     <div>
       <Navbar />

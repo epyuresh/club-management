@@ -6,6 +6,7 @@ import Rotractfooter from "../components/Rotractfooter";
 
 const Rotract = () => {
   const images = ["/r100.jpg", "/r101.jpg", "/r102.jpg", "/r103.jpg"];
+  
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [alternateImage, setAlternateImage] = useState("revent2.jpg");
   const [isImpactVisible, setIsImpactVisible] = useState(false);
@@ -176,6 +177,48 @@ const Rotract = () => {
       image: "pr102.jpg",
     },
   ];
+  const [currentAwardIndex, setCurrentAwardIndex] = useState(0);
+
+  const awards = [
+    {
+      image: "/rocaward1.jpg",
+      title: "Best Innovation Award 2024",
+      description: "Recognition for groundbreaking technological advancement"
+    },
+    {
+      image: "/rocaward2.png",
+      title: "Excellence in Design 2024",
+      description: "Outstanding achievement in product design"
+    },
+    {
+      image: "/rocaward3.jpg",
+      title: "Customer Choice Award",
+      description: "Voted best by our valued customers"
+    },
+    {
+      image: "/rocaward4.png",
+      title: "Sustainability Champion",
+      description: "Leading environmental responsibility initiatives"
+    },
+    {
+      image: "/rocaward5.png",
+      title: "Industry Leadership Award",
+      description: "Setting standards in industry excellence"
+    }
+  ];
+
+  // Add this useEffect for awards carousel
+  useEffect(() => {
+    const awardTimer = setInterval(() => {
+      setCurrentAwardIndex((prevIndex) => 
+        prevIndex === awards.length - 1 ? 0 : prevIndex + 1
+      );
+    }, 3000);
+
+    return () => clearInterval(awardTimer);
+  }, []);
+
+  
 
   return (
     <div>
@@ -283,16 +326,17 @@ const Rotract = () => {
         ))}
       </div>
     </div>
+    
+
       {/* report interface*/}
       <div className="report-container animate-on-scroll">
         {/* Left section with text */}
         <div className="report-left-section">
-          <h1>Stay Updated with the Latest News!</h1>
+          <h1>Stay Updated with the Latest <span className="red-text">NEWS!</span></h1>
           <p>
-            Presenting to you the Annual Report of Rotaract Club of University
-            of Kelaniya for the Rotary International Year 2023-24.
+            Stay updated with the latest happenings in Rotaract! Discover inspiring stories, impactful projects, and global initiatives led by Rotaractors worldwide. 
           </p>
-          <p>Take a glimpse on our journey through the year!</p>
+          <p>Explore how young leaders are driving positive change, fostering connections, and making a difference in communities across the globe.</p>
           <button className="report-button" onClick={() => window.location.href = 'link-to-your-report.pdf'}>Click here</button>
         </div>
   
@@ -329,16 +373,45 @@ const Rotract = () => {
          
         </div>
       </div>
-      <div className="awards-container animate-on-scroll">
-        <h1 className="awards-heading">AWARDS</h1>
-        <div className="awards-images">
-          <img src="raward1.png" alt="Award 1" className="award-image" />
-          <img src="raward2.png" alt="Award 2" className="award-image" />
-          <img src="raward3.png" alt="Award 3" className="award-image" />
-          <img src="raward4.png" alt="Award 4" className="award-image" />
-          <img src="raward5.png" alt="Award 5" className="award-image" />
+      <div className="awards-section animate-on-scroll">
+        <h2>Our Awards & Recognition</h2>
+        <div className="carousel-container">
+          <div 
+            className="carousel-track"
+            style={{
+              transform: `translateX(-${currentAwardIndex * 100}%)`,
+            }}
+          >
+            {awards.map((award, index) => (
+              <div key={index} className="award-slide">
+                <div className="award-card">
+                  <img
+                    src={award.image}
+                    alt={award.title}
+                    className="award-image"
+                  />
+                  <div className="award-content">
+                    <h3 className="award-heading">{award.title}</h3>
+                    <p className="award-description">{award.description}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="navigation-dots">
+            {awards.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setCurrentAwardIndex(index)}
+                className={`nav-dot ${currentAwardIndex === index ? 'active' : ''}`}
+                aria-label={`Go to slide ${index + 1}`}
+              />
+            ))}
+          </div>
         </div>
       </div>
+      
       {/* Executive bord */}
       <div className="executive-board animate-on-scroll">
       <h1>Executive Board</h1>

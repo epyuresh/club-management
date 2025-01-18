@@ -26,21 +26,27 @@ const Rotractnav = () => {
           </a>
           <a
             className="text-gray-800 hover:text-gray-600 transition duration-300 text-lg"
-            href="/about"
+            href="/rotractabout"
           >
             About
           </a>
           <a
             className="text-gray-800 hover:text-gray-600 transition duration-300 text-lg"
-            href="/contact"
+            href="/rotractcontact"
           >
             Contact
           </a>
           <a
             className="bg-blue-500 text-white hover:bg-blue-600 transition duration-300 px-5 py-3 rounded-full text-lg"
-            href="/gallery"
+            href="/rotractevent"
           >
-            Gallery
+            Events
+          </a>
+          <a
+            className="bg-blue-500 text-white hover:bg-blue-600 transition duration-300 px-5 py-3 rounded-full text-lg"
+            href="/rotractnews"
+          >
+            News
           </a>
         </div>
       </div>

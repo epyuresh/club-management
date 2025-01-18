@@ -15,7 +15,10 @@ import Rotract  from './Rotractclub/Rotract';
 import Leologin  from './pages/Leologin';
 import Clubadmin  from './components/Clubadmin';
 import Isacalogin  from './pages/Isacalogin';
-
+import Rotractabout  from './Rotractclub/Rotractabout';
+import Rotractcontact  from './Rotractclub/Rotractcontact';
+import Rotractevent  from './Rotractclub/Rotractevent';
+import Rotractnews  from './Rotractclub/Rotractnews';
 
 
 
@@ -41,6 +44,15 @@ function App() {
       <Route path="leologin" element={<Leologin/>}/>
       <Route path="clubadmin" element={<Clubadmin/>}/>
       <Route path="isacalogin" element={<Isacalogin/>}/>
+      <Route path="rotractabout" element={<Rotractabout/>}/>
+      <Route path="rotractcontact" element={<Rotractcontact/>}/>
+      <Route path="rotractevent" element={<Rotractevent/>}/>
+      <Route path="rotractnews" element={<Rotractnews/>}/>
+
+
+      
+
+      
      
 
       
