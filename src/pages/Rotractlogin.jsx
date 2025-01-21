@@ -53,7 +53,7 @@ const Rotractlogin = () => {
                     <div className="login-content">
                         <div className="rotractlogo-header">
                             <img
-                                src="/rotractuok.png"
+                                src="/rotractlogo.png"
                                 alt="Rotract Logo"
                                 className="rotractlogo"
                             />

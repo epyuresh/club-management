@@ -53,7 +53,7 @@ const Isacalogin = () => {
                     <div className="isacalogin-content">
                         <div className="isacalogin-header">
                             <img
-                                src="/rotractuok.png"
+                                src="/isaclogonew2.png"
                                 alt="isaca Logo"
                                 className="isacalogin-logo"
                             />

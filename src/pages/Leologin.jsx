@@ -53,7 +53,7 @@ const Leologin = () => {
                     <div className="leologin-content">
                         <div className="leologo-header">
                             <img
-                                src="/rotractuok.png"
+                                src="/leologonew.png"
                                 alt="leo Logo"
                                 className="leologo"
                             />

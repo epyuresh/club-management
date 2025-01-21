@@ -260,17 +260,16 @@ const Rotract = () => {
         <div className="interface-content">
           <div className="intro animate-on-scroll">
             <p>
-              Welcome to the Rotaract Club of the University of Kelaniya! We’re
-              passionate about serving our community through meaningful projects
-              while fostering lasting friendships among our members.
+            Rotaract is a club for young people focused on community service, leadership development, and networking. It is part of Rotary International and aims to create positive change through various local and international projects.
             </p>
           </div>
 
           <div className="images animate-on-scroll">
-            <img src="/r101.jpg" alt="Group 1" className="image" />
-            <img src="/r102.jpg" alt="Group 2" className="image" />
-            <img src="/r102.jpg" alt="Group 3" className="image" />
-            <img src="/r102.jpg" alt="Group 3" className="image" />
+            <img src="/roci1.jpg" alt="Group 1" className="image" />
+            <img src="/roci2.jpg" alt="Group 2" className="image" />
+            <img src="/nnn.jpg" alt="Group 3" className="image" />
+            <img src="/roci3.jpg" alt="Group 3" className="image" />
+            
           </div>
 
           <div className="video-section animate-on-scroll">

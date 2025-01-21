@@ -1,6 +1,6 @@
 .rotaract-login-page {
     flex-direction: row;
-    background: linear-gradient(to right, #4989f7, white);;
+    background: linear-gradient(to right,#9107f3 , white);;
     height: 100vh;
     padding: 0;
     margin: 0;
@@ -28,11 +28,11 @@
 }
 
 .rotractlogo {
-    width: 550px;
+    width: 200px;
     height: auto;
     position: absolute; /* Makes it free to move */
     top: 100px;  /* Adjust this value to move the logo down */
-    left: 290px; /* Adjust this value to move the logo to the left or right */
+    left: 450px; /* Adjust this value to move the logo to the left or right */
 }
 
 .heading-container {
