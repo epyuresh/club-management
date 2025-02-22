@@ -1,4 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom"
+
+
+
 import React from "react";
 import Home from './pages/Home';
 import About from './pages/About';
@@ -20,6 +23,8 @@ import Rotractabout  from './Rotractclub/Rotractabout';
 import Rotractevent  from './Rotractclub/Rotractevent';
 import Rotractnews  from './Rotractclub/Rotractnews';
 import Userprofile  from './pages/Userprofile';
+import Newclub  from './admin/Newclub';
+
 
 
 
@@ -50,6 +55,7 @@ function App() {
       <Route path="rotractnews" element={<Rotractnews/>}/>
       <Route path="userprofile" element={<Userprofile/>}/>
       <Route path="rotractabout" element={<Rotractabout/>}/>
+      <Route path="newclub" element={<Newclub/>}/>
       
       
       

@@ -122,6 +122,9 @@
     cursor: pointer;
     transition: transform 0.2s ease;
     width: 150%;
+    display: flex; /* Add this */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
   }
   
   .rsignup-button:hover {

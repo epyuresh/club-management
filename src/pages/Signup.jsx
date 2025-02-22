@@ -15,29 +15,28 @@ const Signup = () => {
           alt="Logo"
           className="logoo"
         />
-       <div className="rsignup-container">
-      <div className="rsignup-form-wrapper">
-        <h2 className="rsignup-heading">Create Your Account</h2>
-        <form className="rsignup-form">
-          <input type="text" className="rinput-box" placeholder="First Name" />
-          <input type="text" className="rinput-box" placeholder="Last Name" />
-          <input type="text" className="rinput-box" placeholder="Username" />
-          <input type="email" className="rinput-box" placeholder="Email" />
-          <input type="text" className="rinput-box" placeholder="Phone" />
-          <input type="password" className="rinput-box" placeholder="Password" />
-          <button type="submit" className="rsignup-button">SIGN UP</button>
-        </form>
-      </div>
-    </div>
-
+        <div className="rsignup-container">
+          <div className="rsignup-form-wrapper">
+            <h2 className="rsignup-heading">Create Your Account</h2>
+            <form className="rsignup-form">
+              <input type="text" className="rinput-box" placeholder="First Name" />
+              <input type="text" className="rinput-box" placeholder="Last Name" />
+              <input type="text" className="rinput-box" placeholder="Username" />
+              <input type="email" className="rinput-box" placeholder="Email" />
+              <input type="text" className="rinput-box" placeholder="Phone" />
+              <input type="password" className="rinput-box" placeholder="Password" />
+              <a href="/login" className="rsignup-button">
+                 SIGN UP
+              </a>
+            </form>
+          </div>
+        </div>
 
         {/* Left Section for Text and Sign Up Button */}
         <div className="text-containerr">
           <h1>ONE OF US?</h1>
           <p>
-          If you're already a member, sign in below to manage your club activities.
-
-
+            If you're already a member, sign in below to manage your club activities.
           </p> 
 
           {/* Sign in Button with href */}
