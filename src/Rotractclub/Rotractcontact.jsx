@@ -15,42 +15,34 @@ import {
 const Rotractcontact = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-red-100 to-white">
-      {/* Hero Section */}
-      <div className="relative h-[500px] bg-gradient-to-r from-red-600 to-red-400">
-        <div className="absolute inset-0 bg-black/50" />
-        <div
-          className="absolute inset-0"
-          style={{
-            backgroundImage: 'url("nnn.jpg")',
-            backgroundPosition: 'center',
-            backgroundSize: 'center',
-            backgroundBlendMode: 'overlay'
-          }}
-        />
+      {/* Hero Section - Updated to remove box */}
+      <div className="relative h-[500px] overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-red-600 via-rose-500 to-orange-400 opacity-90" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_rgba(255,255,255,0.1)_0%,_transparent_60%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,_rgba(0,0,0,0.1)_0%,_transparent_60%)]" />
+        
         <motion.div
           className="relative container mx-auto px-6 h-full flex flex-col justify-center items-center text-center"
           initial={{ opacity: 6, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <div className="bg/30 p-8  backdrop-sm  border-white/20 max-w-3xl">
-            <motion.h1
-              className="text-7xl font-black text-transparent bg-clip-text bg-gradient-to-r from-red-200 via-red-100 to-white mb-6 font-serif drop-shadow-xl"
-              initial={{ opacity: 2, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.3 }}
-            >
-              Get in Touch
-            </motion.h1>
-            <motion.p
-              className="text-2xl font-bold text-white max-w-2xl font-serif leading-relaxed"
-              initial={{ opacity: 1, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.5 }}
-            >
-              Connect with the Rotaract Club of University of Kelaniya - Where Service Meets Excellence
-            </motion.p>
-          </div>
+          <motion.h1
+            className="text-7xl font-black text-transparent bg-clip-text bg-gradient-to-r from-white via-red-100 to-orange-200 mb-8 font-serif drop-shadow-xl"
+            initial={{ opacity: 2, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.3 }}
+          >
+            Get in Touch
+          </motion.h1>
+          <motion.p
+            className="text-2xl font-bold text-white max-w-2xl font-serif leading-relaxed drop-shadow-lg"
+            initial={{ opacity: 1, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.5 }}
+          >
+            Connect with the Rotaract Club of University of Kelaniya - Where Service Meets Excellence
+          </motion.p>
         </motion.div>
       </div>
 

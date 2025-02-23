@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { Heart, MessageCircle, Share2, Calendar, MapPin, Clock } from 'lucide-react';
+import Rotractnav from "../components/Rotractnav";
+import Rotractfooter from "../components/Rotractfooter";
 
 const RotracEvent = () => {
   const [events, setEvents] = useState([
@@ -92,9 +94,11 @@ const RotracEvent = () => {
   };
 
   return (
+    <div> <Rotractnav />
     <div className="min-h-screen bg-gradient-to-tl from-indigo-900 via-purple-900 to-pink-900">
-      <div className="max-w-6xl mx-auto p-8">
-        <div className="text-center mb-16 mt-8">
+      
+      <div className="max-w-6xl mx-auto p-8 pt-32">
+        <div className="text-center mb-16 mt-8 ">
           <h1 className="text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-cyan-400 to-blue-400 mb-6">
             Rotract Club Events
           </h1>
@@ -210,6 +214,8 @@ const RotracEvent = () => {
           ))}
         </div>
       </div>
+    </div>
+    <Rotractfooter />
     </div>
   );
 };

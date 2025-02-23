@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom"
 
 
 import React from "react";
+import Newclub from './admin/Newclub'
 import Home from './pages/Home';
 import About from './pages/About';
 import Contact  from './pages/Contact';
@@ -23,7 +24,7 @@ import Rotractabout  from './Rotractclub/Rotractabout';
 import Rotractevent  from './Rotractclub/Rotractevent';
 import Rotractnews  from './Rotractclub/Rotractnews';
 import Userprofile  from './pages/Userprofile';
-import Newclub  from './admin/Newclub';
+
 
 
 

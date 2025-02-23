@@ -47,8 +47,8 @@ const Login = () => {
           <p className="forgot-password">Forgot Password?</p>
 
           {/* Sign In Button */}
-          <a href="/adminsidebar">
-  <button className="signin-button">SIGN IN</button>
+          <a href="/clubhome">
+           <button className="signin-button">SIGN IN</button>
          </a>
         </div>
 
