@@ -1,7 +1,7 @@
 import React from 'react';
 import { FaEnvelope, FaPhoneAlt, FaMapMarkerAlt } from 'react-icons/fa';
 import './Contact.css';
-import Navbar from "../components/Navbar";
+
 import Footer from "../components/Footer";
 
 const Contact = () => {
