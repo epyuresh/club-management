@@ -5,8 +5,8 @@ import '../admin/MainAdminDashboard.css';
 import'./CreateMainAdmin'
 import CreateMainAdmin from './CreateMainAdmin';
 import ViewAllMainAdmin from './ViewAllMainAdmin';
-import ClubRegistrationForm from './NewClub';
-import ViewAllClubs from './ViewAllClubs';
+import ClubRegistrationForm from './NewClubs';
+import ViewAllClubs from './ViewAllClub';
 import ViewClubDetails from './ViewClubDetails';
 
 export default function MainAdminDashboard() {
