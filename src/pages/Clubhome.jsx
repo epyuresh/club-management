@@ -2,86 +2,89 @@ import React, { useState, useEffect } from "react";
 import "./Clubhome.css";
 import Dashboard from "../components/Dashboard";
 import Sidebar from "../components/Sidebar";
+import Navbar from "../components/Navbar";
+import axios from "axios";
+import { Link } from "react-router-dom";
+import { FaUsers } from "react-icons/fa";
 
-const clubs = [
-  {
-    name: "LEO CLUB",
-    logo: "/leologo.png",
-    bgImages: ["/1.jpg", "/2.jpg", "/3.jpg"],
-    description: `Leo Clubs are youth organizations sponsored by Lions Clubs that empower young people to make a difference. 
-    Leos engage in various community service activities, develop leadership skills, and experience the joy of serving others.`,
-    logoStyle: { marginLeft: "10px", marginRight: "0", width: "60px", height: "50px" },
-    headerStyle: { marginLeft: "10px", marginRight: "0" },
-    link: "/leologin",
-  },
-  {
-    name: "ROTRACT CLUB",
-    logo: "/rotractlogo.png",
-    bgImages: ["/rotractback.jpg", "/aisecback.jpg", "/ledback.jpg"],
-    description: `Rotaract Club is a global organization of young professionals dedicated to community service, leadership development, and cultural exchange, fostering positive change through impactful projects and networking opportunities worldwide.`,
-    link: "/rotractlogin",
-  },
-  {
-    name: "ISACA CLUB",
-    logo: "/isaclogo.png",
-    bgImages: ["/4.jpg", "/5.jpg", "/6.jpg"],
-    description: `ISACA Club empowers students and professionals in IT governance, cybersecurity, and risk management through knowledge sharing, certifications, and networking. It fosters leadership and career growth in the ever-evolving field of technology.`,
-    logoStyle: { marginLeft: "10px" },
-    link: "/isacalogin",
-  },
-  
-];
-
+// ClubCard component that uses club data from API
 const ClubCard = ({ club }) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-
+  
+  // Use the backgroundImageUrls from the API response
+  const bgImages = club.backgroundImageUrls || ["/1.jpg", "/2.jpg", "/3.jpg"];
+  
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % club.bgImages.length);
+      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % bgImages.length);
     }, 3000);
-
     return () => clearInterval(interval);
-  }, [club.bgImages.length]);
+  }, [bgImages.length]);
+
+  // Use the clubLogoUrl from the API response
+  const logo = club.clubLogoUrl || "/leologo.png";
 
   return (
     <div
       className="aa-club-card"
       style={{
-        backgroundImage: `url(${club.bgImages[currentImageIndex]})`,
+        backgroundImage: `url(${bgImages[currentImageIndex]})`,
       }}
     >
       <div className="aa-club-header">
         <img
-          src={club.logo}
-          alt={`${club.name} Logo`}
+          src={logo}
+          alt={`${club.clubName} Logo`}
           className="aa-club-logo"
-          style={club.logoStyle} // Separate inline style for the logo
+          style={{ width: "60px", height: "50px", marginLeft: "10px" }}
         />
-        <h2 className="aa-club-name" style={club.headerStyle}> {/* Separate inline style for the header */}
-          {club.name}
+        <h2 className="aa-club-name" style={{ marginLeft: "10px" }}>
+          {club.clubName.toUpperCase()} CLUB
         </h2>
       </div>
       <hr />
-      <p className="aa-club-description">{club.description}</p>
-      <a href={club.link} className="aa-register-btn"> Join Now</a>
-    
-       
+      <p className="aa-club-description mb-4">{club.clubVision}</p>
+      
+      <div className="aa-club-actions mt-4">
+        <a href={`/rotractlogin?clubId=${club.clubId}`} className="aa-register-btn">Join Now</a>
+      </div>
     </div>
   );
 };
 
 const Clubhome = () => {
+  const [clubs, setClubs] = useState([]);
+
+  useEffect(() => {
+    getAllClubs();
+  }, []);
+
+  const getAllClubs = async () => {
+    try {
+      const response = await axios.get("http://localhost:7000/api/v1/club/all");
+      console.log('Clubs data:', response.data);
+
+      const filteredClubs = response.data.filter(club => 
+        club.clubName.length > 1
+      );
+      
+      setClubs(filteredClubs);
+    } catch (error) {
+      console.error('Error while getting all clubs', error);
+    }
+  };
+
   return (
     <div className="aa-club-home-page">
+      <Navbar />
       <Sidebar />
       <div className="aa-club-content">
-      <Dashboard />
-      <div className="aa-club-container">
-        {clubs.map((club, index) => (
-          <ClubCard key={index} club={club} />
-        ))}
+        <div className="aa-club-container">
+          {clubs.map((club) => (
+            <ClubCard key={club.clubId} club={club} />
+          ))}
+        </div>
       </div>
-    </div>
     </div>
   );
 };
