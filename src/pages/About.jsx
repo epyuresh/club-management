@@ -36,7 +36,7 @@ const About = () => {
               About Club-master
             </h2>
             <p className="mt-6 text-lg leading-8 text-gray-800">
-              Club-master is a dynamic platform designed to streamline the management of university clubs. With a focus on providing modern solutions, we help student clubs manage their events, members, and communications seamlessly. Whether you're looking to organize a club event, track membership, or keep your members engaged, Club-master is here to simplify the process. Our platform is trusted by universities and clubs alike to enhance their operations and bring their community together.
+              Club-master is a dynamic platform designed to streamline the management of University Clubs. With a focus on providing modern solutions, we help student clubs manage their events, members, and communications seamlessly. Whether you're looking to organize a club event, track membership, or keep your members engaged, Club-master is here to simplify the process. Our platform is trusted by universities and clubs alike to enhance their operations and bring their community together.
             </p>
           </div>
 
