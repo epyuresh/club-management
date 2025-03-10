@@ -199,7 +199,7 @@ const RotaractNewsFeed = () => {
                           }`}
                         />
                       </div>
-                      <span className="ml-1 text-base font-semibold group-hover:text-red-600">
+                      <span className="ml-1 text-base font-semibold group-hover:text-blue-600">
                         {item.like?.membersLike?.length || 0}
                       </span>
                     </button>
