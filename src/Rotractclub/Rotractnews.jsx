@@ -188,7 +188,7 @@ const RotaractNewsFeed = () => {
                     <button
                       onClick={() => handleLike(item.newsId)}
                       className={`flex items-center group ${
-                        interactions[item.newsId]?.liked ? 'text-red-600' : 'text-gray-600'
+                        interactions[item.newsId]?.liked ? 'text-blue-600' : 'text-gray-600'
                       }`}
                     >
                       <div className="p-2 rounded-full group-hover:bg-red-100 transition-colors duration-200">

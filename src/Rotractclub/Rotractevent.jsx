@@ -331,7 +331,7 @@ const RotracEvent = () => {
 
                       <div className="space-y-6">
                         <div>
-                          <h2 className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400 mb-4">
+                          <h2 className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 to-blue-400 mb-4">
                             {event.eventName}
                           </h2>
                           <p className="text-cyan-100 leading-relaxed">
@@ -384,7 +384,7 @@ const RotracEvent = () => {
                                                     comment.commentId
                                                   )
                                                 }
-                                                className="text-red-400 hover:text-red-300"
+                                                className="text-red-400 hover:text-red-400"
                                               >
                                                 <Trash2 className="w-4 h-4" />
                                               </button>
