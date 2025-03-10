@@ -43,7 +43,7 @@ const ClubEnrollment = () => {
       );
       console.log(response.data);
        Swal.fire({
-              title: "Welcome to the Club!",
+              title: "Welcome to the Club",
               text: "Enrollment successful",
               icon: "success",
               timer: 1500,
@@ -59,7 +59,7 @@ const ClubEnrollment = () => {
     } catch (error) {
       console.log("Error while enrolling:", error);
       Swal.fire({
-              title: "Already enrolled",
+              title: "Already enrolled.",
               icon: "error",
               confirmButtonText: "Try Again",
               confirmButtonColor: "#d33",
