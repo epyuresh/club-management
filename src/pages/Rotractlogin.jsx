@@ -26,7 +26,7 @@ const ClubEnrollment = () => {
         Swal.fire({
           title: "Enrollment key is incorrect",
           icon: "error",
-          confirmButtonText: "Try Again",
+          confirmButtonText: "Try Again.",
           confirmButtonColor: "#d33",
           background: "#fff",
           customClass: {
