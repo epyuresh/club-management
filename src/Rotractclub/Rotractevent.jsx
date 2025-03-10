@@ -384,7 +384,7 @@ const RotracEvent = () => {
                                                     comment.commentId
                                                   )
                                                 }
-                                                className="text-red-400 hover:text-red-300"
+                                                className="text-red-400 hover:text-red-400"
                                               >
                                                 <Trash2 className="w-4 h-4" />
                                               </button>
