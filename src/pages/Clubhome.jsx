@@ -36,7 +36,7 @@ const ClubCard = ({ club }) => {
           src={logo}
           alt={`${club.clubName} Logo`}
           className="aa-club-logo"
-          style={{ width: "50px", height: "50px", marginLeft: "10px" }}
+          style={{ width: "50px", height: "50px", marginLeft: "11px" }}
         />
         <h2 className="aa-club-name" style={{ marginLeft: "10px" }}>
           {club.clubName.toUpperCase()} CLUB
