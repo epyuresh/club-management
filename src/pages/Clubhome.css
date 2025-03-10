@@ -10,7 +10,7 @@
 .aa-club-content {
   margin-left: 200px;
   margin-top: 70px; 
-  padding: 20px;
+  padding: 19px;
   overflow-y: auto; 
   height: calc(100vh - 70px); 
 }
